@@ -13,8 +13,14 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      // { rel: 'icon', type: 'image/x-icon', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' },
+      { rel: 'stylesheet', href: '/favicon.ico' },
+    ],
+    // script: [
+    //   { src:'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', type:'text/javascript'},
+    //   { src:'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', type:'text/javascript'},
+    //   { src:'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', type:'text/javascript'},
+    // ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
