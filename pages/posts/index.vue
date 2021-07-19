@@ -14,12 +14,10 @@ export default {
   //     app.router.push
   //     app.store
   // }
-  asyncData({ $axios }) {
-    return $axios
-      .$get('https://jsonplaceholder.typicode.com/todos')
-      .then((res) => {
-          return {posts: res}
-      })
+  async asyncData({ $axios }) {
+    const res = await $axios.$get('https://jsonplaceholder.typicode.com/todos');
+    // in data in res.data got only data with this way const {data} and then assign data to posts
+    return {posts: res};
   },
   data() {
     return {
