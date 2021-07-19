@@ -24,6 +24,9 @@ export default {
       posts: [],
     }
   },
+  head: {
+      title: 'Posts'
+  },
   mounted() {
       console.log('mounted');
   }
