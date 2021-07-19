@@ -1,13 +1,39 @@
 <template>
-    <div class="h-full">
-        <h1>Posts Page</h1>
-        <div>
-            <h5 v-for="post in posts" :key="post.id">{{post.title}}</h5>
-        </div>
-
+  <div class="h-full">
+    <h1>Posts Page</h1>
+    <div>
+      <h5 v-for="post in posts" :key="post.id">{{post.title}}</h5>
     </div>
+  </div>
 </template>
 
+<script>
+// this is in server side way
+export default {
+  // asyncData({app}) {
+  //     app.router.push
+  //     app.store
+  // }
+  asyncData({ $axios }) {
+    return $axios
+      .$get('https://jsonplaceholder.typicode.com/todos')
+      .then((res) => {
+          return {posts: res}
+      })
+  },
+  data() {
+    return {
+      posts: [],
+    }
+  },
+  mounted() {
+      console.log('mounted');
+  }
+}
+</script>
+
+<!--
+// this is vue way
 <script>
 // import axios from "@nuxtjs/axios"
 export default {
@@ -29,3 +55,4 @@ export default {
     }
 }
 </script>
+-->
