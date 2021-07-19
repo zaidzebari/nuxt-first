@@ -11,6 +11,7 @@
 
 <script>
 import Cards from "@/components/Card";
+import {mapGetters} from 'vuex'
 // this is in server side way
 export default {
     components: {
@@ -20,23 +21,31 @@ export default {
   //     app.router.push
   //     app.store
   // }
-  async asyncData({ $axios }) {
-    const res = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
-    // in data in res.data got only data with this way const {data} and then assign data to posts
-    return { posts: res };
-  },
-  data() {
+   data() {
     return {
-      posts: [],
+      allPosts: [],
     }
   },
+  async fetch({ $axios, store }) {
+    const res = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
+    // in data in res.data got only data with this way const {data} and then assign data to posts
+    store.dispatch('setPosts', res);
+    // return { posts: res }; // this not work with fetch
+  },
+ 
   head: {
     title: 'Posts',
+  },
+  
+  computed: {
+      ...mapGetters(['posts'])
+    //   allPosts() {
+        //   return this.$store.getters.posts;
+    //   }
   },
   mounted() {
     console.log('mounted');
   },
-  
 }
 </script>
 
