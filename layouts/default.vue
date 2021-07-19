@@ -12,7 +12,10 @@
         >About</nuxt-link
       >
     </div> -->
+    <div class="h-80 bg-gray-700 header-image">
+    </div>
     <div class="bg-indigo-100 px-8 min-h-screen min-w-screen">
+      
       <Nuxt />
     </div>
     <div class="flex justify-center bg-indigo-400 text-white py-3">

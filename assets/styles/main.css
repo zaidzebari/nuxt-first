@@ -1,1 +1,6 @@
 /* here write your css style  */
+.header-image {
+    background-image: url('/background.jpeg');
+    background-position: center;
+    background-size: cover;
+}
