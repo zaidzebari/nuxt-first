@@ -28,12 +28,12 @@ export default {
       allPosts: [],
     }
   },
-  async fetch({ $axios, store }) {
-    const res = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
-    // in data in res.data got only data with this way const {data} and then assign data to posts
-    store.dispatch('setPosts', res);
-    // return { posts: res }; // this not work with fetch
-  },
+  // async fetch({ $axios, store }) {
+  //   const res = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
+  //   // in data in res.data got only data with this way const {data} and then assign data to posts
+  //   store.dispatch('setPosts', res);
+  //   // return { posts: res }; // this not work with fetch
+  // },
  
   head: {
     title: 'Posts',
