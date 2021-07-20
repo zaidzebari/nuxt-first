@@ -5,6 +5,7 @@
     </div>
     <div class="container flex flex-wrap">
       <Cards v-for="post in posts" :key="post.id" :post = 'post' class=" border-2 border-blue-900 w-40 mx-auto"/>
+      <button v-scroll-to="'body'" type="button" class="rounded-full text-2xl fixed bottom-4 right-4 py-2 px-4 bg-blue-800 text-white">^</button>
     </div>
   </div>
 </template>
