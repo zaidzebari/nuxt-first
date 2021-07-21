@@ -1,0 +1,5 @@
+nuxt server init not work for this use previews method
+in the nuxt config change mode from universal to spa
+and then -> npm run build
+we can use firebase hosting is free with limiting for hosting single page application.
+then follow the staic deploy that we wrote before it is same steps
