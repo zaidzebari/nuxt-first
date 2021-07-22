@@ -13,8 +13,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      // { rel: 'icon', type: 'image/x-icon', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' },
-      { rel: 'stylesheet', href: '/favicon.ico' },
+      // {rel: 'stylesheet',  type: 'image/x-icon', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' },
+      { rel: 'icon', href: '/favicon.ico' },
     ],
     // script: [
     //   { src:'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', type:'text/javascript'},
