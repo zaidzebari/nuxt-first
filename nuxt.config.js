@@ -29,7 +29,7 @@ export default {
     '@/assets/styles/main.css'
   ],
 
-  transition: {
+  pageTransition: {
     name: 'fade',
     mode: 'out-in'
   },
